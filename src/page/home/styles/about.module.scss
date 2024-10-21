@@ -1,0 +1,205 @@
+@import '@/styles/__variables.scss';
+@import '@/styles/__breakpoints.scss';
+
+.about {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 20px;
+
+  .aboutImg {
+    width: 280px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 6px 10px rgba(109, 113, 121, 0.6);
+    border-radius: 30px;
+  }
+
+  .aboutContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    .aboutContent {
+      width: 280px;
+      gap: 10px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+
+      .aboutTitle {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+
+      .aboutInfo {
+        font-size: 0.85rem;
+        font-weight: 300;
+        text-align: justify;
+      }
+    }
+
+    .aboutSocialMedia {
+      display: flex;
+      gap: 15px;
+
+      span {
+        i {
+          font-size: 1.5rem;
+          cursor: pointer;
+
+          &:hover {
+            transition: ease-in .3s all;
+            color: $color-primary;
+          }
+
+          &:not(:hover) {
+            transition: ease-in .3s all;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-mobile-md) {
+    .aboutContainer {
+      .aboutContent {
+        .aboutTitle {
+          font-size: 1.4rem;
+        }
+
+        .aboutInfo {
+          font-size: 1.1rem;
+        }
+      }
+
+      .aboutSocialMedia {
+        span {
+          i {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-tablet-sm) {
+    align-items: center;
+    gap: 50px;
+
+    .aboutImg {
+      width: 500px;
+    }
+
+    .aboutContainer {
+      width: 500px;
+      gap: 50px;
+
+      .aboutContent {
+        width: 500px;
+        .aboutTitle {
+          font-size: 1.6rem;
+        }
+        .aboutInfo {
+          font-size: 1.3rem;
+        }
+      }
+
+      .aboutSocialMedia {
+        span {
+          i {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-tablet-md) {
+    .aboutImg {
+      width: 600px;
+    }
+
+    .aboutContainer {
+      width: 600px;
+
+      .aboutContent {
+        width: 600px;
+        .aboutTitle {
+          font-size: 1.8rem;
+        }
+        .aboutInfo {
+          font-size: 1.5rem;
+        }
+      }
+
+      .aboutSocialMedia {
+        span {
+          i {
+            font-size: 2.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop-sm) {
+    height: 100vh;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 90px;
+
+    .aboutImg {
+      width: 450px;
+    }
+
+    .aboutContainer {
+      width: 100%;
+
+      .aboutContent {
+        width: 100%;
+        .aboutTitle {
+          font-size: 2.8em;
+        }
+        .aboutInfo {
+          font-size: 1.4rem;
+        }
+      }
+
+      .aboutSocialMedia {
+        span {
+          i {
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop-lg) {
+    .aboutImg {
+      width: 500px;
+    }
+
+    .aboutContainer {
+      .aboutContent {
+        .aboutTitle {
+          font-size: 3.2rem;
+        }
+        .aboutInfo {
+          font-size: 1.6rem;
+        }
+      }
+
+      .aboutSocialMedia {
+        span {
+          i {
+            font-size: 2.8rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "@/styles/__variables.scss";
+@import "@/styles/__breakpoints.scss";
+
+.home {
+  margin: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  @media (min-width: $breakpoint-mobile-md) {
+    margin: 30px;
+  }
+  @media (min-width: $breakpoint-tablet-sm) {
+    margin: 40px 50px;
+  }
+  @media (min-width: $breakpoint-desktop-lg) {
+    margin: 0 200px;
+  }
+}

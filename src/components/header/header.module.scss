@@ -1,0 +1,129 @@
+@import '@/styles/__variables.scss';
+@import '@/styles/__breakpoints.scss';
+
+.header {
+  background-color: $color-primary;
+  height: 110px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .divNavigation {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-family: $font-family-nunito;
+      font-size: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        text-decoration: none;
+        color: $color-secondary-text;
+        font-family: $font-family-nunito;
+        font-weight: 400;
+        font-size: 1.1rem;
+        font-style: italic;
+
+        display: inline-block;
+        transition: color 800ms;
+        position: relative;
+
+        cursor: pointer;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 1px;
+          background-color: $color-secondary-text;
+          transition: width 0.3s ease-in-out;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .btnReserve {
+    display: none;
+    position: absolute;
+    right: 0;
+
+    div {
+      display: flex;
+      margin-right: 66px;
+    }
+  }
+
+  @media (min-width: $breakpoint-mobile-md) {
+    .divNavigation {
+      h1 {
+        font-size: 1.7rem;
+      }
+
+      nav {
+        ul {
+          a {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-tablet-sm) {
+    height: 140px;
+
+    .divNavigation {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      nav {
+        ul {
+          a {
+            font-size: 1.7rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop-sm) and (min-height: 720px) {
+    height: 170px;
+
+    .divNavigation {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+    .btnReserve {
+      display: flex;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop-lg) {
+    height: 200px;
+
+    .divNavigation {
+      h1 {
+        font-size: 3rem;
+      }
+
+      a {
+        font-size: 2rem;
+      }
+    }
+  }
+}

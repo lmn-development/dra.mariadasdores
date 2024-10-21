@@ -1,0 +1,80 @@
+@import '@/styles/__variables.scss';
+@import '@/styles/__breakpoints.scss';
+
+.footer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 15px;
+
+  padding: 20px;
+
+  background-color: $color-primary;
+
+  .rightsReserved {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+  }
+
+  .socialMedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    h4 {
+      font-size: 1.2rem;
+    }
+
+    div {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+
+      span {
+        font-size: 20px;
+        i {
+          cursor: pointer;
+
+          &:hover {
+            transition: ease-in 0.3s all;
+            color: $color-secondary;
+          }
+
+          &:not(:hover) {
+            transition: ease-in 0.3s all;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-tablet-sm) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+
+    .rightsReserved {
+      width: 390px;
+      font-size: 1rem;
+    }
+
+    .socialMedia {
+      h4 {
+        font-size: 1.3rem;
+      }
+
+      div {
+        span {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop-sm) {
+    justify-content: space-around;
+  }
+}

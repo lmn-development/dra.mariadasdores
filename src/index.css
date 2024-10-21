@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+body {
+  background-color: #ede7f6;
+  color: #757575;
+}
+
+h1,
+h2 {
+  font-family: 'Nunito', sans-serif;
+}
+
+p,
+a,
+h3,
+h4 {
+  font-family: 'Lora', serif;
+}
+
+button {
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Scrollbar decoration */
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #757575;
+  border-radius: 20px;
+}

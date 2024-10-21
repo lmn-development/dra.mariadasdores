@@ -1,0 +1,52 @@
+@import '@/styles/__variables.scss';
+@import '@/styles/__breakpoints.scss';
+
+.card {
+  background-color: $color-primary;
+
+  border-radius: 5px;
+  width: 200px;
+  height: 300px;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .cardName {
+      font-family: $font-family-nunito;
+      font-size: 1.1rem;
+    }
+  }
+
+  .cardText {
+    font-family: $font-family-lora;
+    font-size: 0.9rem;
+    text-align: center;
+    font-style: italic;
+  }
+
+  @media (min-width: $breakpoint-tablet-sm) {
+    width: 238px;
+    height: 300px;
+
+    div {
+      .cardName {
+        font-size: 1.3rem;
+      }
+    }
+
+    .cardText {
+      font-size: 1.1rem;
+    }
+  }
+}
