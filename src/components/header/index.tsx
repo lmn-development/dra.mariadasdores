@@ -7,14 +7,14 @@ export function Header() {
   return (
     <header className={style.header}>
       <div className={style.divNavigation}>
-        <h1>Dra. Maria das Dores</h1>
+        <h1>Dra. Maria Quaresma</h1>
         <nav>
           <ul>
             <li>
               <a href="#sobre">Sobre</a>
             </li>
             <li>
-              <a href="#avaliacao">Avaliações</a>
+              <a href="#">Recomendações</a>
             </li>
             <li>
               <a href="#contato">Contato</a>

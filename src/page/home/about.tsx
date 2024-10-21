@@ -1,4 +1,4 @@
-import style from './styles/about.module.scss';
+import style from "./styles/about.module.scss";
 
 export function About() {
   return (
@@ -7,16 +7,16 @@ export function About() {
         <div className={style.aboutContent}>
           <h2 className={style.aboutTitle}>Sobre Mim</h2>
           <p className={style.aboutInfo}>
-            Sou Tim, um psicólogo de 30 anos apaixonado por compreender a mente
-            humana. Com foco especial no atendimento a pessoas mais idosas,
-            acredito na importância de ouvir e apoiar cada indivíduo em sua
-            jornada emocional. Minha prática se estende a todas as idades,
-            promovendo um ambiente acolhedor e inclusivo. Combinando abordagens
-            tradicionais e modernas, busco conectar gerações e criar um espaço
-            seguro onde todos possam compartilhar suas experiências e encontrar
-            sentido. Estou comprometido em fazer a diferença na vida das
-            pessoas, ajudando-as a navegar pelos desafios da vida com empatia e
-            compreensão.
+            Olá! Sou Maria Quaresma, pós-graduanda em Saúde Mental e Atenção
+            Psicossocial. Ao longo da minha trajetória, percebi o quanto as
+            crises e as mudanças que vivemos em diferentes fases da vida podem
+            ser desafiadoras. Por isso, dedico meu trabalho a ajudar pessoas a
+            enfrentarem esses momentos com mais equilíbrio e acolhimento.
+            Ofereço terapia online, em um ambiente seguro e sigiloso, onde você
+            poderá se sentir à vontade para falar sobre suas dificuldades. Meu
+            objetivo é proporcionar apoio emocional em momentos de crise e fazer
+            com que você se sinta compreendido, em um horário que se ajuste à
+            sua rotina, sem comprometer o seu bem-estar.
           </p>
         </div>
         <div className={style.aboutSocialMedia}>
@@ -31,7 +31,7 @@ export function About() {
           </span>
         </div>
       </div>
-      <img src="assets/img/img-02.png" alt="" className={style.aboutImg} />
+      <img src="assets/img-01.jpg" alt="" className={style.aboutImg} />
     </section>
   );
 }

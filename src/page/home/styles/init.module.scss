@@ -9,10 +9,11 @@
   align-items: center;
 
   .initImg {
+    display: none;
     width: 280px;
     height: auto;
     object-fit: cover;
-    box-shadow: 0 6px 10px rgba(109, 113, 121, 0.6);
+    // box-shadow: 0 6px 10px rgba(109, 113, 121, 0.6);
     border-radius: 30px;
 
     margin-bottom: 20px;
@@ -63,6 +64,7 @@
   @media (min-width: $breakpoint-tablet-sm) {
     align-items: center;
     .initImg {
+      display: flex;
       width: 500px;
     }
     .initContent {

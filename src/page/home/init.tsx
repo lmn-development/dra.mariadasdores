@@ -9,19 +9,20 @@ export function Init() {
     <section className={style.init}>
       <div className={style.initContent}>
         <h2 className={style.initTitle}>
-          Terapia atenciosa e compassiva através de uma lente culturalmente
-          informada.
+          Acolhimento e suporte emocional para transformar desafios em
+          oportunidades de crescimento pessoal.
         </h2>
         <h3 className={style.initInfo}>
-          Dísponivel online e presencialmente em Interlagos, São Paulo
+          Disponível para consultas online, com flexibilidade de horários para
+          atender à sua rotina.
         </h3>
         <Button className={style.initButton} onClick={chat}>
-          Psicoterapia com Tim
+          Psicoterapia com Maria
         </Button>
       </div>
 
       <img
-        src="./assets/img/img-01.png"
+        src="./assets/img-02.png"
         alt="Imagem de perfil"
         className={style.initImg}
       />
