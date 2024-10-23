@@ -1,8 +1,9 @@
+import { Section } from "@/components/section";
 import style from "./styles/about.module.scss";
 
 export function About() {
   return (
-    <section className={style.about}>
+    <Section classStyle={style.about} idElement="about">
       <div className={style.aboutContainer}>
         <div className={style.aboutContent}>
           <h2 className={style.aboutTitle}>Sobre Mim</h2>
@@ -32,6 +33,6 @@ export function About() {
         </div>
       </div>
       <img src="assets/img-01.jpg" alt="" className={style.aboutImg} />
-    </section>
+    </Section>
   );
 }

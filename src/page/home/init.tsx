@@ -1,12 +1,13 @@
 import { Button } from "@/components/button";
 import style from "./styles/init.module.scss";
 import { openChat } from "@/utils/openChat";
+import { Section } from "@/components/section";
 
 export function Init() {
   const chat = openChat;
 
   return (
-    <section className={style.init}>
+    <Section>
       <div className={style.initContent}>
         <h2 className={style.initTitle}>
           Acolhimento e suporte emocional para transformar desafios em
@@ -26,6 +27,6 @@ export function Init() {
         alt="Imagem de perfil"
         className={style.initImg}
       />
-    </section>
+    </Section>
   );
 }
