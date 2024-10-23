@@ -1,106 +1,77 @@
 @import "@/styles/__variables.scss";
 @import "@/styles/__breakpoints.scss";
 
-.about {
-  gap: 20px;
-
-.aboutImg {
-  width: 280px;
-  height: auto;
-  object-fit: cover;
-  box-shadow: 0 6px 10px rgba(109, 113, 121, 0.6);
-  border-radius: 30px;
+img {
+  width: 100px;
 }
 
 .aboutContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
-  .aboutContent {
-    width: 280px;
-    gap: 10px;
+  gap: 20px;
 
+  .aboutWrapper {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: center;
+    gap: 30px;
+    align-items: center;
 
-    .aboutTitle {
-      font-size: 1.25rem;
-      font-weight: 700;
-    }
-
-    .aboutInfo {
-      font-size: 0.85rem;
-      font-weight: 300;
-      text-align: justify;
-    }
-  }
-
-  .aboutSocialMedia {
-    display: flex;
-    gap: 15px;
-
-    span {
-      i {
-        font-size: 1.5rem;
-        cursor: pointer;
-
-        &:hover {
-          transition: ease-in 0.3s all;
-          color: $color-primary;
-        }
-
-        &:not(:hover) {
-          transition: ease-in 0.3s all;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: $breakpoint-mobile-md) {
-  .aboutContainer {
     .aboutContent {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      gap: 10px;
+
       .aboutTitle {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
+        font-weight: 700;
       }
 
       .aboutInfo {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        font-weight: 300;
+        text-align: justify;
       }
     }
 
     .aboutSocialMedia {
+      display: flex;
+      gap: 15px;
+
       span {
         i {
-          font-size: 1.8rem;
+          font-size: 1.5rem;
+          cursor: pointer;
+
+          &:hover {
+            transition: ease-in 0.3s all;
+            color: $color-primary;
+          }
+
+          &:not(:hover) {
+            transition: ease-in 0.3s all;
+          }
         }
       }
     }
   }
-}
-
-@media (min-width: $breakpoint-tablet-sm) {
-  gap: 50px;
-
   .aboutImg {
-    width: 500px;
+    width: 200px;
+    height: 180px;
+    object-fit: cover;
+    box-shadow: 0 6px 10px rgba(109, 113, 121, 0.6);
+    border-radius: 10px;
   }
 
-  .aboutContainer {
-    width: 500px;
+  @media (min-width: $breakpoint-tablet-sm) {
+    flex-direction: row-reverse;
     gap: 50px;
 
-    .aboutContent {
-      width: 500px;
-      .aboutTitle {
-        font-size: 1.6rem;
-      }
-      .aboutInfo {
-        font-size: 1.3rem;
-      }
+    .aboutTitle {
+      font-size: 2rem;
+    }
+
+    .aboutInfo {
+      font-size: 1.8rem;
     }
 
     .aboutSocialMedia {
@@ -111,88 +82,62 @@
       }
     }
   }
-}
 
-@media (min-width: $breakpoint-tablet-md) {
-  .aboutImg {
-    width: 600px;
+  @media (min-width: $breakpoint-tablet-md) {
   }
 
-  .aboutContainer {
-    width: 600px;
+  @media (min-width: $breakpoint-desktop-sm) {
+    flex-direction: row-reverse;
 
-    .aboutContent {
-      width: 600px;
-      .aboutTitle {
-        font-size: 1.8rem;
-      }
-      .aboutInfo {
-        font-size: 1.5rem;
-      }
+    .aboutImg {
+      width: 450px;
+      height: auto;
     }
 
-    .aboutSocialMedia {
-      span {
-        i {
-          font-size: 2.2rem;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: $breakpoint-desktop-sm) {
-  flex-direction: row-reverse;
-
-  .aboutImg {
-    width: 450px;
-  }
-
-  .aboutContainer {
-    width: 100%;
-
-    .aboutContent {
+    .aboutWrapper {
       width: 100%;
-      .aboutTitle {
-        font-size: 2.8em;
-      }
-      .aboutInfo {
-        font-size: 1.4rem;
-      }
-    }
 
-    .aboutSocialMedia {
-      span {
-        i {
-          font-size: 2.5rem;
+      .aboutContent {
+        width: 100%;
+        .aboutTitle {
+          font-size: 2.8em;
+        }
+        .aboutInfo {
+          font-size: 1.4rem;
+        }
+      }
+
+      .aboutSocialMedia {
+        span {
+          i {
+            font-size: 2.5rem;
+          }
         }
       }
     }
   }
-}
-
-@media (min-width: $breakpoint-desktop-lg) {
-  .aboutImg {
-    width: 500px;
-  }
-
-  .aboutContainer {
-    .aboutContent {
-      .aboutTitle {
-        font-size: 3.2rem;
-      }
-      .aboutInfo {
-        font-size: 1.6rem;
-      }
+  @media (min-width: $breakpoint-desktop-lg) {
+    .aboutImg {
+      width: 500px;
     }
 
-    .aboutSocialMedia {
-      span {
-        i {
-          font-size: 2.8rem;
+    .aboutWrapper {
+      .aboutContent {
+        .aboutTitle {
+          font-size: 3.2rem;
+        }
+        .aboutInfo {
+          font-size: 1.6rem;
+        }
+      }
+
+      .aboutSocialMedia {
+        span {
+          i {
+            font-size: 2.8rem;
+          }
         }
       }
     }
   }
-}
 }
