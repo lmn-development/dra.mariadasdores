@@ -1,0 +1,50 @@
+.contactContainer {
+  flex-direction: column;
+  justify-content: normal;
+
+  .contactTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .contactWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+
+    .contactContent {
+      width: 660px;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      gap: 50px;
+
+      .contactTexts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .contactButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        
+        // TODO ajustar tamanho do ícone
+        .whatsappIcon {
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+.imagem {
+  width: 300px;
+  height: 300px;
+  background-color: gray;
+}
