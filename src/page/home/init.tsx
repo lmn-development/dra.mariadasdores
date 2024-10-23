@@ -7,7 +7,7 @@ export function Init() {
   const chat = openChat;
 
   return (
-    <Section>
+    <Section classStyle={style.initContainer}>
       <div className={style.initContent}>
         <h2 className={style.initTitle}>
           Acolhimento e suporte emocional para transformar desafios em
@@ -22,11 +22,18 @@ export function Init() {
         </Button>
       </div>
 
-      <img
-        src="./assets/img-02.png"
-        alt="Imagem de perfil"
-        className={style.initImg}
-      />
+      <div className={style.initImgs}>
+        <img
+          src="./assets/sofa-gradient.png"
+          alt="Imagem de perfil"
+          className={`${style.initImg} ${style.initImgGradient}`}
+        />
+        <img
+          src="./assets/sofa-normal.jpeg"
+          alt="Imagem de perfil"
+          className={`${style.initImg} ${style.initImgNormal}`}
+        />
+      </div>
     </Section>
   );
 }

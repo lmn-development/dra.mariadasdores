@@ -3,8 +3,8 @@ import style from "./styles/about.module.scss";
 
 export function About() {
   return (
-    <Section classStyle={style.about} idElement="about">
-      <div className={style.aboutContainer}>
+    <Section classStyle={style.aboutContainer} idElement="about">
+      <div className={style.aboutWrapper}>
         <div className={style.aboutContent}>
           <h2 className={style.aboutTitle}>Sobre Mim</h2>
           <p className={style.aboutInfo}>
@@ -32,7 +32,7 @@ export function About() {
           </span>
         </div>
       </div>
-      <img src="assets/img-01.jpg" alt="" className={style.aboutImg} />
+      <img src="assets/person.jpg" alt="" className={style.aboutImg} />
     </Section>
   );
 }
