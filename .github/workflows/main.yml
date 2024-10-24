@@ -9,6 +9,12 @@ jobs:
   gh-pages:
     runs-on: ubuntu-latest
 
+    env:
+      VITE_APP_BASE=${{ secrets.VITE_APP_BASE }}
+      GIT_EMAIL=${{ secrets.USER_EMAIL }}
+      GIT_NAME=${{ secrets.USER_NAME }}
+      TOKEN_REPO=${{ secrets.TOKEN_REPO }}
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -23,8 +29,8 @@ jobs:
 
       - name: Configure Git
         run: | 
-          git config --global user.email ${{ secrets.USER_EMAIL }}
-          git config --global user.name ${{ secrets.USER_NAME }}
+          git config --global user.email $GIT_EMAIL
+          git config --global user.name $GIT_NAME
 
       - name: Build React Project
         run: npm run predeploy
@@ -35,4 +41,4 @@ jobs:
           target_branch: gh-pages
           build_dir: dist
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN_REPO }}
+          GITHUB_TOKEN: $TOKEN_REPO
