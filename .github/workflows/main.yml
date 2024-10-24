@@ -6,7 +6,6 @@ on:
       - main
 
 jobs:
-
   gh-pages:
     runs-on: ubuntu-latest
 
