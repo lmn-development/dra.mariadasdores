@@ -1,7 +1,12 @@
 import { Section } from "@/components/section";
 import style from "./styles/about.module.scss";
+import { openChat } from "@/utils/openChat";
 
 export function About() {
+  const navigate = (location: string) => {
+    window.location.href = location;
+  };
+  const chat = openChat;
   return (
     <Section classStyle={style.aboutContainer} idElement="about">
       <div className={style.aboutWrapper}>
@@ -21,13 +26,21 @@ export function About() {
           </p>
         </div>
         <div className={style.aboutSocialMedia}>
-          <span>
+          <span
+            onClick={() =>
+              navigate("https://www.facebook.com/mariadores.caetano")
+            }
+          >
             <i className="fa-brands fa-facebook"></i>
           </span>
-          <span>
+          <span
+            onClick={() =>
+              navigate("https://www.instagram.com/psi_maria.quaresma/")
+            }
+          >
             <i className="fa-brands fa-instagram"></i>
           </span>
-          <span>
+          <span onClick={chat}>
             <i className="fa-brands fa-whatsapp"></i>
           </span>
         </div>

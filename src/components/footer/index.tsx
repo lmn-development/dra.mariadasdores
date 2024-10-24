@@ -1,23 +1,34 @@
+import { openChat } from "@/utils/openChat";
 import style from "./footer.module.scss";
 
 export function Footer() {
+  const navigate = (location: string) => {
+    window.location.href = location;
+  };
+  const chat = openChat;
   return (
     <footer className={style.footer}>
       <div className={style.rightsReserved}>
-        <p>
-          Copyright &copy; 2024 LMN Development. All rights reserved.
-        </p>
+        <p>Copyright &copy; 2024 LMN Development. All rights reserved.</p>
       </div>
       <div className={style.socialMedia}>
         <h4>Redes Sociais</h4>
         <div>
-          <span>
+          <span
+            onClick={() =>
+              navigate("https://www.facebook.com/mariadores.caetano")
+            }
+          >
             <i className="fa-brands fa-facebook"></i>
           </span>
-          <span>
+          <span
+            onClick={() =>
+              navigate("https://www.instagram.com/psi_maria.quaresma/")
+            }
+          >
             <i className="fa-brands fa-instagram"></i>
           </span>
-          <span>
+          <span onClick={chat}>
             <i className="fa-brands fa-whatsapp"></i>
           </span>
         </div>
