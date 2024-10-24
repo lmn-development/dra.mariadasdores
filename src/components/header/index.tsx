@@ -7,7 +7,7 @@ export function Header() {
   return (
     <header className={style.header}>
       <div className={style.divNavigation}>
-        <h1>Dra. Maria Quaresma</h1>
+        <h1>Psicoterapeuta<br />Maria Quaresma</h1>
         <nav>
           <ul>
             <li>
