@@ -13,7 +13,6 @@ jobs:
       VITE_APP_BASE: ${{ secrets.VITE_APP_BASE }}
       GIT_EMAIL: ${{ secrets.USER_EMAIL }}
       GIT_NAME: ${{ secrets.USER_NAME }}
-      TOKEN_REPO: ${{ secrets.TOKEN_REPO }}
 
     steps:
       - name: Checkout Repository
@@ -41,4 +40,4 @@ jobs:
           target_branch: gh-pages
           build_dir: dist
         env:
-          GITHUB_TOKEN: $TOKEN_REPO
+          GITHUB_TOKEN: ${{ secrets.TOKEN_REPO }}
