@@ -29,7 +29,7 @@ export function Init() {
           className={`${style.initImg} ${style.initImgGradient}`}
         />
         <img
-          src="./assets/sofa-normal.jpeg"
+          src="./assets/sofa-normal.png"
           alt="Imagem de perfil"
           className={`${style.initImg} ${style.initImgNormal}`}
         />

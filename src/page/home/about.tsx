@@ -32,7 +32,7 @@ export function About() {
           </span>
         </div>
       </div>
-      <img src="assets/person.jpg" alt="" className={style.aboutImg} />
+      <img src="assets/person.png" alt="" className={style.aboutImg} />
     </Section>
   );
 }
