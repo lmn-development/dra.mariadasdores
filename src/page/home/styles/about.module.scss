@@ -7,6 +7,11 @@ img {
 
 .aboutContainer {
   gap: 20px;
+  overflow: hidden;
+
+  .motionDiv   {
+    position: relative;
+  }
 
   .aboutWrapper {
     display: flex;
