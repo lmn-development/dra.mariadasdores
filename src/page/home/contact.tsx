@@ -1,7 +1,9 @@
+import { openChat } from "@/utils/openChat";
 import style from "./styles/contact.module.scss";
 import { Button } from "@/components/button";
 
 export function Contact() {
+  const chat = openChat;
   return (
     <section id="contact" className={style.contactSection}>
       <div className={style.contactImage}>
@@ -28,7 +30,7 @@ export function Contact() {
               lado. Vamos juntos iniciar essa jornada de transformação!
             </p>
           </div>
-          <Button className={style.contactButton}>
+          <Button className={style.contactButton} onClick={chat}>
             <img
               src="assets/logo-whatsapp.png"
               alt=""
