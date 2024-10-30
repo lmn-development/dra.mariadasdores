@@ -1,0 +1,44 @@
+@import '@/styles/__variables.scss';
+@import '@/styles/__breakpoints.scss';
+
+.dropTipTitle {
+  font-size: 1.2rem;
+  color: $color-dark-green;
+  font-weight: 600;
+}
+
+i {
+  margin-left: auto;
+  transition: transform 0.25s cubic-bezier(0, 0, 0, 1);
+  color: $color-dark-green;
+}
+
+.itemBtnExpanded i {
+  transform: rotate(180deg);
+}
+
+.dropTipsItem {
+  margin-bottom: 10px;
+}
+
+.btn {
+  border: none;
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+  background-color: $color-primary;
+}
+
+.dropTipsContent {
+  transition: height 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+.conteudo {
+  background-color: $color-primary;
+  color: $color-dark-green;
+  font-size: 1rem;
+  line-height: 30px;
+  padding: 16px;
+}
