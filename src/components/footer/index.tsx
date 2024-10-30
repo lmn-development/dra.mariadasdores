@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <footer className={style.footer}>
       <div className={style.rightsReserved}>
-        <p>Copyright &copy; 2024 LMN Development. All rights reserved.</p>
+        <p>Copyright &copy; 2024 Maria Quaresma. Todos direitos reservados.</p>
       </div>
       <div className={style.socialMedia}>
         <h4>Redes Sociais</h4>
