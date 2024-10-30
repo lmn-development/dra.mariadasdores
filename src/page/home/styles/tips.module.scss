@@ -3,17 +3,31 @@
 
 .tipsSection {
   flex-direction: column;
-  justify-content: normal;
+  justify-content: center;
   align-items: start;
   gap: 30px;
 
   .tipsTitle {
     font-size: 2rem;
     color: $color-dark-green;
-    font-weight: 600;
+    font-weight: 700;
   }
 
-  @media (min-width: $breakpoint-mobile-sm) {
+  .cardsContainer {
+    width: 100%;
+  }
 
+  @media (min-width: $breakpoint-desktop-sm) {
+    height: 50vh;
+
+    .tipsTitle {
+      font-size: 2.8rem;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop-lg) {
+    .tipsTitle {
+      font-size: 3.2rem;
+    }
   }
 }

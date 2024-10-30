@@ -32,7 +32,7 @@ export function Tips() {
     <Section classStyle={style.tipsSection}>
       <h2 className={style.tipsTitle}>Dicas</h2>
 
-      <Accordion transition transitionTimeout={100}>
+      <Accordion transition transitionTimeout={100} className={style.cardsContainer}>
         {cards.map((c, index) => (
           <Item key={index} title={c.title} text={c.text} />
         ))}
