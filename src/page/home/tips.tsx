@@ -29,7 +29,7 @@ export function Tips() {
   ];
 
   return (
-    <Section classStyle={style.tipsSection}>
+    <Section classStyle={style.tipsSection} idElement='tips'>
       <h2 className={style.tipsTitle}>Dicas</h2>
 
       <Accordion transition transitionTimeout={100} className={style.cardsContainer}>
