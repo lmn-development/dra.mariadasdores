@@ -17,7 +17,7 @@ const ItemModel = ({ header, ...rest }: AccordionProps) => (
     header={
       <>
         <h3 className={style.dropTipTitle}>{header}</h3>
-        <i className="fa-solid fa-chevron-down"></i>
+        <i className={`fa-solid fa-chevron-down ${style.dropTipIcon}`}></i>
       </>
     }
     className={style.dropTipsItem}
