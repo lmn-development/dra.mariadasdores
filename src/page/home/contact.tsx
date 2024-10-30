@@ -47,7 +47,7 @@ export function Contact() {
   };
 
   return (
-    <section className={style.contactSection}>
+    <section className={style.contactSection} id="contact">
       <h2 className={style.contactTitle}>Entre em Contato</h2>
 
       <div className={style.contactContainer}>
