@@ -18,7 +18,7 @@ export function Init() {
           atender à sua rotina.
         </h3>
         <Button className={style.initButton} onClick={chat}>
-          Psicoterapia com Maria
+          Psicologia com Maria
         </Button>
       </div>
 
