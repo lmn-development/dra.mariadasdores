@@ -18,7 +18,9 @@ h2 {
 p,
 a,
 h3,
-h4 {
+h4,
+label,
+input {
   font-family: 'Lora', serif;
 }
 
