@@ -1,12 +1,12 @@
 @import "@/styles/__variables.scss";
 @import "@/styles/__breakpoints.scss";
 
-img {
-  width: 100px;
-}
-
 .aboutContainer {
   gap: 20px;
+
+  .aboutImg {
+    width: 100px;
+  }
 
   .aboutWrapper {
     display: flex;
@@ -67,12 +67,14 @@ img {
     flex-direction: row-reverse;
     gap: 50px;
 
-    .aboutTitle {
-      font-size: 2rem;
-    }
+    .aboutContent {
+      .aboutTitle {
+        font-size: 2.5rem;
+      }
 
-    .aboutInfo {
-      font-size: 1.8rem;
+      .aboutInfo {
+        font-size: 1.8rem;
+      }
     }
 
     .aboutSocialMedia {
@@ -82,9 +84,6 @@ img {
         }
       }
     }
-  }
-
-  @media (min-width: $breakpoint-tablet-md) {
   }
 
   @media (min-width: $breakpoint-desktop-sm) {

@@ -1,7 +1,5 @@
-import { openChat } from '@/utils/openChat';
 import style from './styles/contact.module.scss';
 import { Button } from '@/components/button';
-import { Section } from '@/components/section';
 import { useState } from 'react';
 
 export function Contact() {
@@ -15,37 +13,11 @@ export function Contact() {
     console.log(name, email, phone, message);
   };
 
-  const chat = openChat;
   return (
-    <Section classStyle={style.contactSection}>
+    <section className={style.contactSection}>
       <h2 className={style.contactTitle}>Entre em Contato</h2>
 
       <div className={style.contactContainer}>
-        <div className={style.contactLeft}>
-          <div className={style.contactTexts}>
-            <p className={style.contactText}>
-              Estou aqui para ajudar você a dar os primeiros passos em direção a
-              uma vida mais equilibrada e plena. Se você está enfrentando
-              desafios emocionais ou apenas deseja conversar sobre suas
-              preocupações, não hesite em me procurar.
-            </p>
-            <p className={style.contactText}>
-              Cada jornada é única, e a primeira conversa pode ser um grande
-              passo. Estou disponível para ouvir e apoiar você da forma que
-              precisar. Sinta-se à vontade para me contatar pelo WhatsApp.
-            </p>
-          </div>
-
-          <Button onClick={chat} className={style.contactButton}>
-            <img
-              src="assets/logo-whatsapp.png"
-              alt=""
-              className={style.whatsappIcon}
-            />
-            Enviar mensagem
-          </Button>
-        </div>
-        <div className={style.lineColumn}></div>
         <form onSubmit={handleSubmit}>
           <label className={style.contactLabel}>
             <span className={style.labelText}>Nome completo</span>
@@ -99,9 +71,9 @@ export function Contact() {
             ></textarea>
           </label>
 
-          <Button type="submit">Enviar</Button>
+          <Button type="submit" className={style.contactButton}>Enviar</Button>
         </form>
       </div>
-    </Section>
+    </section>
   );
 }
