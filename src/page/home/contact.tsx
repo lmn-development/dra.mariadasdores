@@ -1,16 +1,49 @@
-import style from './styles/contact.module.scss';
-import { Button } from '@/components/button';
-import { useState } from 'react';
+import style from "./styles/contact.module.scss";
+import { Button } from "@/components/button";
+import { useState } from "react";
+import emailjs from "emailjs-com";
 
 export function Contact() {
-  const [name, setName] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
-  const [phone, setPhone] = useState<string>('');
-  const [message, setMessage] = useState<string>('');
+
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [isError, setIsError] = useState<boolean>(false);
+
+  const emailServiceId = import.meta.env.VITE_EMAIL_SERVICE_ID;
+  const emailTemplateId = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
+  const emailUserId = import.meta.env.VITE_EMAIL_USER_ID;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(name, email, phone, message);
+
+    const obj = {
+      name,
+      email,
+      phone,
+      message,
+    }
+    
+    emailjs
+      .send(
+        emailServiceId,
+        emailTemplateId,
+        obj,
+        emailUserId
+      )
+      .then(() => {
+        console.log("Email enviado com sucesso.");
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+      })
+      .catch(e => {
+        console.log(e);
+        console.log("Erro ao enviar email.");
+        setIsError(true)
+      })
   };
 
   return (
@@ -60,8 +93,6 @@ export function Contact() {
               Escreva uma mensagem para enviar para a psicóloga
             </span>
             <textarea
-              name=""
-              id=""
               cols={30}
               rows={10}
               value={message}
@@ -70,8 +101,10 @@ export function Contact() {
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
           </label>
-
-          <Button type="submit" className={style.contactButton}>Enviar</Button>
+          {isError && <p style={{ color: "red" }}>Erro ao enviar email, tente novamente mais tarde.</p>}
+          <Button type="submit" className={style.contactButton}>
+            Enviar
+          </Button>
         </form>
       </div>
     </section>
