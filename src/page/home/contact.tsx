@@ -106,7 +106,7 @@ export function Contact() {
 
           <label className={style.contactLabel}>
             <span className={style.labelText}>
-              Escreva uma mensagem para enviar para a psicologa
+              Escreva uma mensagem para enviar para a psicóloga
             </span>
             <textarea
               cols={30}
