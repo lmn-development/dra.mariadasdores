@@ -1,48 +1,33 @@
-@import "@/styles/__variables.scss";
-@import "@/styles/__breakpoints.scss";
+@import '@/styles/__variables.scss';
+@import '@/styles/__breakpoints.scss';
 
 .contactSection {
-  width: 100%;
-  display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 40px;
 
-  .contactImage {
-    width: 100%;
-
-    img {
-      width: 100%;
-      height: 100px;
-      object-fit: cover;
-      filter: blur(3px);
-    }
+  .contactTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $color-dark-green;
   }
 
   .contactContainer {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 30px 20px;
+    width: 100%;
+    gap: 30px;
 
-    .contactTitle {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: $color-dark-green;
-    }
-
-    .contactContent {
+    .contactLeft {
       display: flex;
       flex-direction: column;
+      width: 100%;
       align-items: end;
       gap: 20px;
 
       .contactTexts {
-        width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
 
         .contactText {
           font-size: 1rem;
@@ -50,97 +35,60 @@
           text-align: justify;
         }
       }
-
       .contactButton {
         display: flex;
         gap: 10px;
         align-items: center;
         justify-content: center;
+        font-size: 1rem;
+
         .whatsappIcon {
           width: 20px;
           height: 20px;
         }
       }
     }
-  }
 
-  @media (min-width: $breakpoint-mobile-md) {
-    .contactContainer {
-      padding: 30px;
-    }
-  }
-  @media (min-width: $breakpoint-tablet-sm) {
-    flex-direction: row;
-    align-items: start;
-
-    .contactImage {
-      height: 600px;
-      img {
-        height: 100%;
-      }
+    .lineColumn {
+      width: 100%;
+      height: 2px;
+      background-color: $color-dark-green;
     }
 
-    .contactContainer {
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
       align-items: center;
-      padding: 40px 50px;
-    }
-  }
-  @media (min-width: $breakpoint-desktop-sm) {
-    height: 100vh;
-    flex-direction: row;
 
-    .contactImage {
-      height: 100%;
-      img {
-        height: 100%;
-      }
-    }
+      .contactLabel {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
 
-    .contactContainer {
-      padding: 40px 100px;
-      height: 100%;
-      justify-content: center;
-
-      .contactTitle {
-        font-size: 2.5rem;
-      }
-
-      .contactContent {
-        .contactTexts {
-          .contactText {
-            font-size: 1.2rem;
-          }
+        .labelText {
+          font-size: 1rem;
+          font-weight: 400;
+          color: $color-dark-green;
         }
-      }
 
-      .contactButton {
-        .whatsappIcon {
-          width: 30px;
-          height: 30px;
+        .labelInput {
+          width: 100%;
+          background: none;
+          border: solid 1px $color-dark-green;
+          padding: 5px;
+          border-radius: 30px;
+          color: $color-dark-green;
         }
-      }
-    }
-  }
-  @media (min-width: $breakpoint-desktop-lg) {
-    .contactContainer {
-      padding: 40px 200px;
 
-      .contactTitle {
-        font-size: 3rem;
-      }
-
-      .contactContent {
-        .contactTexts {
-          .contactText {
-            font-size: 1.5rem;
-          }
-        }
-      }
-
-      .contactButton {
-        .whatsappIcon {
-          width: 40px;
-          height: 40px;
+        .labelTextarea {
+          width: 100%;
+          background: none;
+          border: solid 1px $color-dark-green;
+          padding: 5px;
+          border-radius: 10px;
+          color: $color-dark-green;
         }
       }
     }
