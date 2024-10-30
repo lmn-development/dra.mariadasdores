@@ -24,8 +24,6 @@ export function Contact() {
       phone,
       message,
     }
-
-    console.log(emailUserId);
     
     emailjs
       .send(

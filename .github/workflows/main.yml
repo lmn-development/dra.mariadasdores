@@ -11,6 +11,9 @@ jobs:
 
     env:
       VITE_APP_BASE: ${{ secrets.VITE_APP_BASE }}
+      VITE_EMAIL_SERVICE_ID: ${{ secrets.VITE_EMAIL_SERVICE_ID }}
+      VITE_EMAIL_TEMPLATE_ID: ${{ secrets.VITE_EMAIL_TEMPLATE_ID }}
+      VITE_EMAIL_USER_ID: ${{ secrets.VITE_EMAIL_USER_ID }}
       GIT_EMAIL: ${{ secrets.USER_EMAIL }}
       GIT_NAME: ${{ secrets.USER_NAME }}
 
