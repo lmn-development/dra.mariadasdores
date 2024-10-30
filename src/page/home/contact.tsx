@@ -15,6 +15,22 @@ export function Contact() {
   const emailTemplateId = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
   const emailUserId = import.meta.env.VITE_EMAIL_USER_ID;
 
+  const formattedPhone = (value: string) => {
+    const cleaned = value.replace(/\D/g, "");
+
+    const formatted = cleaned
+      .replace(/^(\d{2})(\d)/, "($1) $2")
+      .replace(/(\d{5})(\d{4})$/, "$1-$2");
+
+    return formatted;
+  }
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const inputValue = e.target.value;
+    const formatted = formattedPhone(inputValue);
+    setPhone(formatted);
+  }
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -82,7 +98,7 @@ export function Contact() {
               type="text"
               placeholder="(11) 9xxxx-xxxx"
               value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={handlePhoneChange}
               className={style.labelInput}
               required
             />
