@@ -19,7 +19,7 @@ export function Tips() {
       text: 'Se o divórcio não foi consensual, uma das partes pode sair mais fragilizada. Nesse momento, é importante buscar acolhimento junto a pessoas com quem você tenha vínculo, afastar-se temporariamente de amigos em comum, explorar novos lugares e buscar autoconhecimento através da terapia. ',
     },
     {
-      title: 'O que colabora para uma velhice saudável?',
+      title: 'Como iniciar uma transição de carreira?',
       text: 'Como a terapia pode ajudar? No ambiente terapêutico, você pode desenvolver autoconhecimento para entender qual área mais combina com você, definir metas e objetivos, criar um planejamento – inclusive financeiro – e contar com apoio psicológico para enfrentar os desafios e potencializar suas qualidades na nova carreira.',
     },
     {
