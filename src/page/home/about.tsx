@@ -13,16 +13,14 @@ export function About() {
         <div className={style.aboutContent}>
           <h2 className={style.aboutTitle}>Sobre Mim</h2>
           <p className={style.aboutInfo}>
-            Olá! Sou Maria Quaresma, pós-graduanda em Saúde Mental e Atenção
-            Psicossocial. Ao longo da minha trajetória, percebi o quanto as
-            crises e as mudanças que vivemos em diferentes fases da vida podem
-            ser desafiadoras. Por isso, dedico meu trabalho a ajudar pessoas a
-            enfrentarem esses momentos com mais equilíbrio e acolhimento.
-            Ofereço terapia online, em um ambiente seguro e sigiloso, onde você
-            poderá se sentir à vontade para falar sobre suas dificuldades. Meu
-            objetivo é proporcionar apoio emocional em momentos de crise e fazer
-            com que você se sinta compreendido, em um horário que se ajuste à
-            sua rotina, sem comprometer o seu bem-estar.
+            Olá! Sou Maria Quaresma, psicóloga graduada pela Universidade Vale
+            do Salgado (Univs), pós-graduada em Psicologia Organizacional e do
+            Trabalho pela Faculdade Intervale e pós-graduanda em Saúde Mental e
+            Atenção Psicossocial pela Famart. <br /><br /> Tenho formação em
+            Psicogerontologia e experiência em temas como prevenção ao suicídio,
+            psicologia parental e perinatal. Ofereço terapia online, em um
+            ambiente seguro e sigiloso, para ajudar você a enfrentar desafios
+            com equilíbrio e acolhimento, sempre respeitando sua rotina.
           </p>
         </div>
         <div className={style.aboutSocialMedia}>
